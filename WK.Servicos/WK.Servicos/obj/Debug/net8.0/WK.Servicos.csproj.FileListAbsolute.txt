@@ -14,7 +14,6 @@ C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\obj\Debug\net8.0\WK.Servicos.Generat
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\obj\Debug\net8.0\WK.Servicos.AssemblyInfoInputs.cache
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\obj\Debug\net8.0\WK.Servicos.AssemblyInfo.cs
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\obj\Debug\net8.0\WK.Servicos.csproj.CoreCompileInputs.cache
-C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\obj\Debug\net8.0\WK.Servicos.MvcApplicationPartsAssemblyInfo.cs
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\obj\Debug\net8.0\WK.Servicos.MvcApplicationPartsAssemblyInfo.cache
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\obj\Debug\net8.0\staticwebassets.build.json
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\obj\Debug\net8.0\staticwebassets.development.json
@@ -39,3 +38,4 @@ C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\bin\Debug\net8.0\WK.Servicos.Domain.
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\bin\Debug\net8.0\WK.Servicos.Infra.dll
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\bin\Debug\net8.0\WK.Servicos.Domain.pdb
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\bin\Debug\net8.0\WK.Servicos.Infra.pdb
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos\obj\Debug\net8.0\WK.Servicos.sourcelink.json

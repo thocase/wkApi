@@ -9,3 +9,4 @@ C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\WK.Servicos.
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\refint\WK.Servicos.Domain.dll
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\WK.Servicos.Domain.pdb
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\ref\WK.Servicos.Domain.dll
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\WK.Servicos.Domain.sourcelink.json

@@ -13,6 +13,7 @@ namespace WK.Servicos.Domain.DomainObjects
         void Add(T entity);
 
         void Update(T entity);
+        Task Delete(int id);
 
         IUnitOfWork UnitOfWork { get; }
     }

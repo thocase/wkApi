@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WK.Servicos.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b04237c7738d24f11558e789ce6dadef2cdb4fc6")]
 [assembly: System.Reflection.AssemblyProductAttribute("WK.Servicos.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WK.Servicos.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -27,19 +27,26 @@ namespace WK.Servicos.Infra.Repositorio
             return await _context.Categorias.ToListAsync();
         }
 
-        public Task<ProdutoCategoria> GetById(int id)
+        public async Task<ProdutoCategoria> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Categorias.Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
         public void Add(ProdutoCategoria entity)
         {
-            throw new NotImplementedException();
+            _context.Add(entity);
         }
 
         public void Update(ProdutoCategoria entity)
         {
-            throw new NotImplementedException();
+            _context.Update(entity);
+        }
+
+        public async Task Delete(int id)
+        {
+            var item = await _context.Categorias.Where(x => x.Id == id).FirstOrDefaultAsync();
+
+            _context.Remove(item);
         }
 
         public void Dispose()

@@ -13,3 +13,4 @@ C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Infra\obj\Debug\net8.0\WK.Servicos.I
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Infra\obj\Debug\net8.0\refint\WK.Servicos.Infra.dll
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Infra\obj\Debug\net8.0\WK.Servicos.Infra.pdb
 C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Infra\obj\Debug\net8.0\ref\WK.Servicos.Infra.dll
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Infra\obj\Debug\net8.0\WK.Servicos.Infra.sourcelink.json
