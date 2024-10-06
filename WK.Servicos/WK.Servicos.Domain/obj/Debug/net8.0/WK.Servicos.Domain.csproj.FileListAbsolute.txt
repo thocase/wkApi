@@ -1,0 +1,11 @@
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\bin\Debug\net8.0\WK.Servicos.Domain.deps.json
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\bin\Debug\net8.0\WK.Servicos.Domain.dll
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\bin\Debug\net8.0\WK.Servicos.Domain.pdb
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\WK.Servicos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\WK.Servicos.Domain.AssemblyInfoInputs.cache
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\WK.Servicos.Domain.AssemblyInfo.cs
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\WK.Servicos.Domain.csproj.CoreCompileInputs.cache
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\WK.Servicos.Domain.dll
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\refint\WK.Servicos.Domain.dll
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\WK.Servicos.Domain.pdb
+C:\projeto wk\wkApi\WK.Servicos\WK.Servicos.Domain\obj\Debug\net8.0\ref\WK.Servicos.Domain.dll
