@@ -27,9 +27,9 @@ namespace WK.Servicos.Infra.Repositorio
             return await _context.Categorias.ToListAsync();
         }
 
-        public async Task<ProdutoCategoria> GetById(int id)
+        public  ProdutoCategoria GetById(int id)
         {
-            return await _context.Categorias.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return _context.Categorias.Find(id);
         }
 
         public void Add(ProdutoCategoria entity)
@@ -42,11 +42,12 @@ namespace WK.Servicos.Infra.Repositorio
             _context.Update(entity);
         }
 
-        public async Task Delete(int id)
+        public void Delete(int id)
         {
-            var item = await _context.Categorias.Where(x => x.Id == id).FirstOrDefaultAsync();
+            var item = _context.Categorias.Find(id);
 
             _context.Remove(item);
+           
         }
 
         public void Dispose()

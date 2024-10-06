@@ -8,11 +8,11 @@ namespace WK.Servicos.Domain.DomainObjects
 {
     public abstract class Entity
     {
-        public int Id { get; set; }
+        public int id { get; set; }
 
         public override string ToString()
         {
-            return $"{GetType().Name} [Id={Id}]";
+            return $"{GetType().Name} [Id={id}]";
         }
     }
 }

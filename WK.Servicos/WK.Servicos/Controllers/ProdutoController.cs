@@ -4,6 +4,8 @@ using WK.Servicos.Infra.API.DTO;
 
 namespace WK.Servicos.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class ProdutoController : ControllerBase
     {
         private readonly IProdutoService _produtoService;
@@ -13,7 +15,8 @@ namespace WK.Servicos.Controllers
             _produtoService = produtoService;
         }
 
-        [HttpGet(Name = "ListaProduto")]
+        [HttpGet]
+        [Route("ListaProduto")]
         public async Task<List<ProdutoDTO>> Lista()
         {
             var retorno = await _produtoService.ListarProduto();
@@ -21,15 +24,17 @@ namespace WK.Servicos.Controllers
             return retorno;
         }
 
-        [HttpGet(Name = "ObterPorId")]
-        public async Task<ProdutoDTO> ObterPorId(int id)
+        [HttpGet]
+        [Route("ObterPorId/{id}")]
+        public async Task<ProdutoDTO> ObterProdutoPorId(int id)
         {
             var retorno = await _produtoService.ObterPorId(id);
 
             return retorno;
         }
 
-        [HttpPost(Name = "Adicionar")]
+        [HttpPost]
+        [Route("Adicionar")]
         public ActionResult<ProdutoDTO> Adicionar(ProdutoDTO produtoDTO)
         {
             _produtoService.Adicionar(produtoDTO);
@@ -37,7 +42,8 @@ namespace WK.Servicos.Controllers
             return Ok();
         }
 
-        [HttpPut(Name = "Atualizar")]
+        [HttpPut]
+        [Route("Atualizar")]
         public ActionResult<ProdutoDTO> Atualizar(ProdutoDTO produtoDTO)
         {
             _produtoService.Atualizar(produtoDTO);
@@ -45,7 +51,8 @@ namespace WK.Servicos.Controllers
             return Ok();
         }
 
-        [HttpDelete(Name = "Delete")]
+        [HttpDelete]
+        [Route("Delete/{id}")]
         public ActionResult<ProdutoDTO> Delete(int id)
         {
             _produtoService.Delete(id);

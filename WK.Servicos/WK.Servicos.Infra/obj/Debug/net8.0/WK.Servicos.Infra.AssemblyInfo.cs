@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WK.Servicos.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b04237c7738d24f11558e789ce6dadef2cdb4fc6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f357fdf9fc042b9ac7079f8714ff5be69235b97")]
 [assembly: System.Reflection.AssemblyProductAttribute("WK.Servicos.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WK.Servicos.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

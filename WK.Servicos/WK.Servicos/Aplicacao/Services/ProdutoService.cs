@@ -2,6 +2,7 @@
 using WK.Servicos.Domain.Entidade.Produto;
 using WK.Servicos.Domain.Repositorio;
 using WK.Servicos.Infra.API.DTO;
+using WK.Servicos.Infra.Repositorio;
 
 namespace WK.Servicos.Aplicacao.Services
 {
@@ -21,27 +22,28 @@ namespace WK.Servicos.Aplicacao.Services
 
             return envio.Select(x => new ProdutoDTO
             {
-                Id = x.Id,
-                Nome = x.Nome,
-                Descricao = x.Descricao,
-                Preco = x.Preco,
-                QuantidadeEstoque = x.QuantidadeEstoque,
-                Categoria = new ProdutoCategoriaDTO { Id = x.Categoria.Id, Nome = x.Categoria.nome_categoria, Descricao = x.Categoria.descricao }
+                Id = x.id,
+                Nome = x.nome_produto,
+                Descricao = x.descricao,
+                Preco = x.preco,
+                QuantidadeEstoque = x.quantidade_estoque,
+                CategoriaId = x.id_produto_categoria
             }).ToList();
         }
 
         public async Task<ProdutoDTO> ObterPorId(int id)
         {
-            var retorno = await _produtoRepositorio.GetById(id);
+            var retorno = _produtoRepositorio.GetById(id);
 
             return new ProdutoDTO
             {
-                Id = retorno.Id,
-                Nome = retorno.Nome,
-                Descricao = retorno.Descricao,
-                Preco = retorno.Preco,
-                QuantidadeEstoque = retorno.QuantidadeEstoque,
-                Categoria = new ProdutoCategoriaDTO { Id = retorno.Categoria.Id, Nome = retorno.Categoria.nome_categoria, Descricao = retorno.Categoria.descricao }
+                Id = retorno.id,
+                Nome = retorno.nome_produto,
+                Descricao = retorno.descricao,
+                Preco = retorno.preco,
+                QuantidadeEstoque = retorno.quantidade_estoque,
+                CategoriaId = retorno.id_produto_categoria
+                //Categoria = new ProdutoCategoriaDTO { Id = retorno.Categoria.Id, Nome = retorno.Categoria.nome_categoria, Descricao = retorno.Categoria.descricao }
             };
         }
 
@@ -49,15 +51,15 @@ namespace WK.Servicos.Aplicacao.Services
         {
             var entity = new Produto
             {
-                Id = produtoDTO.Id,
-                Nome = produtoDTO.Nome,
-                Descricao = produtoDTO.Descricao,
-                Preco = produtoDTO.Preco,
-                QuantidadeEstoque = produtoDTO.QuantidadeEstoque,
-                Categoria = new ProdutoCategoria { Id = produtoDTO.Categoria.Id, nome_categoria = produtoDTO.Categoria.Nome, descricao = produtoDTO.Categoria.Descricao }
+                nome_produto = produtoDTO.Nome,
+                descricao = produtoDTO.Descricao,
+                preco = produtoDTO.Preco,
+                quantidade_estoque = produtoDTO.QuantidadeEstoque,
+                id_produto_categoria = produtoDTO.CategoriaId
             };
-
             _produtoRepositorio.Add(entity);
+
+            _produtoRepositorio.UnitOfWork.Commit();
 
         }
 
@@ -65,21 +67,25 @@ namespace WK.Servicos.Aplicacao.Services
         {
             var entity = new Produto
             {
-                Id = produtoDTO.Id,
-                Nome = produtoDTO.Nome,
-                Descricao = produtoDTO.Descricao,
-                Preco = produtoDTO.Preco,
-                QuantidadeEstoque = produtoDTO.QuantidadeEstoque,
-                Categoria = new ProdutoCategoria { Id = produtoDTO.Categoria.Id, nome_categoria = produtoDTO.Categoria.Nome, descricao = produtoDTO.Categoria.Descricao }
+                id = produtoDTO.Id,
+                nome_produto = produtoDTO.Nome,
+                descricao = produtoDTO.Descricao,
+                preco = produtoDTO.Preco,
+                quantidade_estoque = produtoDTO.QuantidadeEstoque,
+                id_produto_categoria = produtoDTO.CategoriaId
             };
 
             _produtoRepositorio.Update(entity);
+
+            _produtoRepositorio.UnitOfWork.Commit();
 
         }
 
         public void Delete(int id)
         {
             _produtoRepositorio.Delete(id);
+
+            _produtoRepositorio.UnitOfWork.Commit();
 
         }
     }

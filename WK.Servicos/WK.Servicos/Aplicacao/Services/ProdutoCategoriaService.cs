@@ -20,14 +20,14 @@ namespace WK.Servicos.Aplicacao.Services
         {
             var envio = await _produtoCategoriaRepositorio.Listar();
 
-            return envio.Select(x => new ProdutoCategoriaDTO { Id = x.Id, Descricao = x.descricao, Nome = x.nome_categoria }).ToList();
+            return envio.Select(x => new ProdutoCategoriaDTO { Id = x.id, Descricao = x.descricao, Nome = x.nome_categoria }).ToList();
         }
 
         public async Task<ProdutoCategoriaDTO> ObterPorId(int id)
         {
-            var envio = await _produtoCategoriaRepositorio.GetById(id);
+            var envio =  _produtoCategoriaRepositorio.GetById(id);
 
-            return new ProdutoCategoriaDTO { Id = envio.Id, Descricao = envio.descricao, Nome = envio.nome_categoria };
+            return new ProdutoCategoriaDTO { Id = envio.id, Descricao = envio.descricao, Nome = envio.nome_categoria };
         }
 
         public void Adicionar(ProdutoCategoriaDTO categoriaDTO)
@@ -36,13 +36,17 @@ namespace WK.Servicos.Aplicacao.Services
 
             _produtoCategoriaRepositorio.Add(entity);
 
+            _produtoCategoriaRepositorio.UnitOfWork.Commit(); 
+
         }
 
         public void Atualizar(ProdutoCategoriaDTO categoriaDTO)
         {
-            var entity = new ProdutoCategoria { descricao = categoriaDTO.Descricao, nome_categoria = categoriaDTO.Nome };
+            var entity = new ProdutoCategoria { id = categoriaDTO.Id, descricao = categoriaDTO.Descricao, nome_categoria = categoriaDTO.Nome };
 
             _produtoCategoriaRepositorio.Update(entity);
+
+            _produtoCategoriaRepositorio.UnitOfWork.Commit();
 
         }
 
@@ -50,6 +54,7 @@ namespace WK.Servicos.Aplicacao.Services
         {
             _produtoCategoriaRepositorio.Delete(id);
 
+            _produtoCategoriaRepositorio.UnitOfWork.Commit();
         }
     }
 }
